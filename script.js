@@ -1,10 +1,10 @@
 // Run the script after the DOM has fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     // Select DOM elements
-    const addButton = document.getElementById('add-task');
-    const taskInput = document.getElementById('task-input');
-    const taskList = document.getElementById('task-list');
+    const addButton = document.getElementById("add-task-btn");
+    const taskInput = document.getElementById("task-input");
+    const taskList = document.getElementById("task-list");
 
     // Function to add a new task to the list
     function addTask() {
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Create new list item for the task
-        const li = document.createElement('li');
+        const li = document.createElement("li");
         li.textContent = taskText;
 
         // Create remove button for the task
-        const removeBtn = document.createElement('button');
+        const removeBtn = document.createElement("button");
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+        removeBtn.className ="remove-btn";
 
         // Remove task when remove button is clicked
         removeBtn.onclick = () => {
@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add event listener to the Add Task button
-    addButton.addEventListener('click', addTask);
+    addButton.addEventListener("click", addTask);
 
     // Add event listener to allow adding task on Enter key press
-    taskInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
+    taskInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
             addTask();
         }
     });
